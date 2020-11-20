@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-colorschemes"></script>
+    <title>Building charts</title>
+  </head>
+  <body>
+    <div class="chart">
+      <div class="chart__info">
+        <h3>Chart one:</h3>
+        <p><strong> the sample data,</strong></p>
+        <p>Realestate: 18.05%</p>
+        <p>Utilities: 22.33%</p>
+        <p>Materials: 3.97%</p>
+        <p>Healthcare: 19.24%</p>
+        <p>Finance: 5.11%</p>
+        <p>Energy: 11.74%</p>
+        <p>Industrials: 3.01%</p>
+        <p>Consumer Discretionary: 11.13%</p>
+        <p>Other: Remaining %</p>
+      </div>
+      <div class="chart__chart pie">
+        <canvas id="myChart" width="480" height="400"></canvas>
+      </div>
+    </div>
+    <script src="scripts/ChartPie.js"></script>
+    <!-- <script src="scripts/ChartOne.js"></script> -->
+  </body>
+</html>
