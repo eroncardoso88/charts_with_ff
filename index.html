@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-colorschemes"></script>
+    <script src="scripts/sampleData.js"></script>
     <title>Building charts</title>
   </head>
   <body>
@@ -24,10 +25,50 @@
         <p>Other: Remaining %</p>
       </div>
       <div class="chart__chart pie">
-        <canvas id="myChart" width="480" height="400"></canvas>
+        <canvas id="pie" width="480" height="400"></canvas>
       </div>
     </div>
-    <script src="scripts/ChartPie.js"></script>
+    <div class="chart">
+      <div class="chart__info">
+        <h3>Chart two:</h3>
+        <p><strong> the sample data,</strong></p>
+        <p>2011:</p>
+        <p>Autumn 2011: 680 opened positions, 340 closed positions</p>
+        <p>Winter 2011: 1150 opened positions, 610 closed positions</p>
+        <p>Spring 2011: 560 opened positions, 1100 closed positions</p>
+        <p>Summer 2011: 880 opened positions, 770 closed positions</p>
+        <p>2012:</p>
+        <p>Autumn 2012: 60 opened positions, 95 closed positions</p>
+        <p>Winter 2012: 200 opened positions, 1800 closed positions</p>
+        <p>Spring 2012: 350 opened positions, 1600 closed positions</p>
+        <p>Summer 2012: 400 opened positions, 1300 closed positions</p>
+        <p>2013:</p>
+        <p>Autumn 2013: 550 opened positions, 740 closed positions</p>
+        <p>Winter 2013: 680 opened positions, 300 closed positions</p>
+        <p>Spring 2013: 1200 opened positions, 50 closed positions</p>
+        <p>Summer 2013: 1500 opened positions, 210 closed positions</p>
+        <p>2014:</p>
+        <p>Autumn 2014: 1100 opened positions, 350 closed positions</p>
+        <p>Winter 2014: 800 opened positions, 600 closed positions</p>
+        <p>Spring 2014: 650 opened positions, 350 closed positions</p>
+        <p>Summer 2014: 940 opened positions, 485 closed positions</p>
+        <p>2015:</p>
+        <p>Autumn 2015: 1100 opened positions, 700 closed positions</p>
+        <p>Winter 2015: 830 opened positions, 1050 closed positions</p>
+        <p>Spring 2015: 650 opened positions, 1520 closed positions</p>
+        <p>Summer 2015: 450 opened positions, 1680 closed positions</p>
+        <p>2016:</p>
+        <p>Autumn 2016: 500 opened positions, 500 closed positions</p>
+        <p>Winter 2016: 420 opened positions, 380 closed positions</p>
+        <p>Spring 2016: 800 opened positions, 650 closed positions</p>
+        <p>Summer 2016: 900 opened positions, 1000 closed positions</p>
+      </div>
+      <div class="chart__chart pie">
+        <canvas id="bar" width="480" height="250"></canvas>
+      </div>
+    </div>
+
+    <script src="scripts/ChartScripts.js"></script>
     <!-- <script src="scripts/ChartOne.js"></script> -->
   </body>
 </html>
