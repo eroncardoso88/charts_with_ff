@@ -17,7 +17,7 @@
     }
 
     createBarChart() {
-      var piectx = document.getElementById(this.paramType).getContext("2d");
+      var barctx = document.getElementById(this.paramType).getContext("2d");
       var myArr = [];
       var maximumValue = 0;
 
@@ -33,52 +33,83 @@
           label: ["Opened"],
           data: [openedPositions],
           stack: stack,
-          backgroundColor: "red",
+          backgroundColor: "#9E9E9E",
         };
         let b = {
           label: ["Closed"],
           data: [-closedPositions],
           stack: stack,
-          backgroundColor: "blue",
+          backgroundColor: "#B6000E",
         };
         myArr.push(a);
         myArr.push(b);
       });
       console.log("mydata:", myArr);
 
-      return new Chart(piectx, {
+      return new Chart(barctx, {
         type: this.paramType,
         title: this.title,
         data: {
-          labels: [""],
+          labels: ["2011          2012          2013          2014"],
           datasets: myArr,
         },
         options: {
-          // plugins: {
-          //   colorschemes: {
-          //     scheme: "office.Adjacency6",
-          //     //https://nagix.github.io/chartjs-plugin-colorschemes/colorchart.html
-          //     //https://github.com/nagix/chartjs-plugin-colorschemes
-          //   },
-          // },
           legend: {
             display: false,
+          },
+          tooltips: {
+            callbacks: {
+              title: function (title, data) {
+                return "";
+              },
+              label: function (label, penis) {
+                let openClos = "opened";
+                let finalValue = label.yLabel;
+                if (label.yLabel < 0) {
+                  openClos = "closed";
+                  finalValue = -label.yLabel;
+                }
+                return `${finalValue} ${openClos} positions`;
+              },
+            },
           },
           scales: {
             xAxes: [
               {
                 stacked: true,
+                barPercentage: 0.45,
+                categorySpacing: 0.5,
+                gridLines: {
+                  display: false,
+                },
               },
             ],
             yAxes: [
               {
                 stacked: true,
+                gridLines: {
+                  display: false,
+                },
+
                 ticks: {
                   max: maximumValue,
                   stepSize: maximumValue / 3,
-                  maxTicksLimit: 6,
+                  maxTicksLimit: 7,
                   beginAtZero: true,
                   min: -maximumValue,
+                  callback: function (label, index, labels) {
+                    switch (label) {
+                      case 2 * (maximumValue / 3):
+                        return "";
+                      case -2 * (maximumValue / 3):
+                        return "";
+                      case 0:
+                        return "———";
+                        break;
+                      default:
+                        return label;
+                    }
+                  },
                 },
               },
             ],
@@ -131,35 +162,3 @@
   ChartOneInstance.createChart();
   ChartTwoInstance.createChart();
 })();
-
-const optionsRanking = {
-  maintainAspectRatio: false,
-  deferred: {
-    enabled: false,
-    delay: 1000,
-    yOffset: 300,
-  },
-  events: [],
-  legend: {
-    display: false,
-    fullWidth: false,
-    position: "bottom",
-  },
-  hover: { mode: null },
-  scales: {
-    yAxes: [
-      {
-        stacked: true,
-      },
-    ],
-    xAxes: [
-      {
-        stacked: true,
-        ticks: {
-          max: 100,
-          stepSize: 25,
-        },
-      },
-    ],
-  },
-};
