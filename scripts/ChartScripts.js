@@ -53,7 +53,10 @@
           labels: ["2011          2012          2013          2014"],
           datasets: myArr,
         },
+        defaults: {},
         options: {
+          defaultFontFamily: "inherit",
+          responsive: false,
           legend: {
             display: false,
           },
@@ -80,7 +83,8 @@
                 barPercentage: 0.45,
                 categorySpacing: 0.5,
                 gridLines: {
-                  display: false,
+                  display: true,
+                  drawOnChartArea: false,
                 },
               },
             ],
@@ -88,7 +92,8 @@
               {
                 stacked: true,
                 gridLines: {
-                  display: false,
+                  display: true,
+                  drawOnChartArea: false,
                 },
 
                 ticks: {
@@ -100,11 +105,11 @@
                   callback: function (label, index, labels) {
                     switch (label) {
                       case 2 * (maximumValue / 3):
-                        return "";
+                        return undefined;
                       case -2 * (maximumValue / 3):
-                        return "";
+                        return undefined;
                       case 0:
-                        return "———";
+                        return "—";
                         break;
                       default:
                         return label;
@@ -117,7 +122,6 @@
         },
       });
     }
-
     createPieChart() {
       console.log(document.getElementById(this.paramType));
 
@@ -156,8 +160,10 @@
   var ChartTwoInstance = new Grafico(
     "bar",
     barChartData,
-    "Anthony's pie chart sample Data"
+    "Anthony's bar chart sample Data"
   );
+  var newObj = ChartTwoInstance.createChart();
+  console.log("newObj", newObj);
 
   ChartOneInstance.createChart();
   ChartTwoInstance.createChart();
