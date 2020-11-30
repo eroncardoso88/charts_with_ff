@@ -50,7 +50,7 @@
         type: this.paramType,
         title: this.title,
         data: {
-          labels: ["2011          2012          2013          2014"],
+          labels: ["2013          2014          2015          2016"],
           datasets: myArr,
         },
         defaults: {},

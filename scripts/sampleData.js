@@ -22,54 +22,6 @@ var pieDataObject = {
 
 var barChartData = [
   {
-    period: "autumn 2011",
-    openedPositions: 680,
-    closedPositions: 340,
-    stack: "2011a",
-  },
-  {
-    period: "winter 2011",
-    openedPositions: 1150,
-    closedPositions: 610,
-    stack: "2011b",
-  },
-  {
-    period: "spring 2011",
-    openedPositions: 560,
-    closedPositions: 1100,
-    stack: "2011c",
-  },
-  {
-    period: "summer 2011",
-    openedPositions: 880,
-    closedPositions: 770,
-    stack: "2011d",
-  },
-  {
-    period: "autumn 2012",
-    openedPositions: 60,
-    closedPositions: 95,
-    stack: "2012a",
-  },
-  {
-    period: "winter 2012",
-    openedPositions: 200,
-    closedPositions: 1800,
-    stack: "2012b",
-  },
-  {
-    period: "spring 2012",
-    openedPositions: 350,
-    closedPositions: 1600,
-    stack: "2012c",
-  },
-  {
-    period: "summer 2012",
-    openedPositions: 400,
-    closedPositions: 1300,
-    stack: "2012d",
-  },
-  {
     period: "autumn 2013",
     openedPositions: 550,
     closedPositions: 740,
