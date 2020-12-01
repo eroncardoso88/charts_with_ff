@@ -52,6 +52,7 @@
         data: {
           labels: ["2013          2014          2015          2016"],
           datasets: myArr,
+          barPercentage: 0.57,
         },
         defaults: {},
         options: {
@@ -80,8 +81,8 @@
             xAxes: [
               {
                 stacked: true,
-                barPercentage: 0.45,
-                categorySpacing: 0.5,
+                barPercentage: 0.66,
+                categoryPercentage: 0.94,
                 gridLines: {
                   display: true,
                   drawOnChartArea: false,
