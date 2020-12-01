@@ -50,7 +50,7 @@
         type: this.paramType,
         title: this.title,
         data: {
-          labels: ["2013          2014          2015          2016"],
+          labels: ["2013             2014             2015              2016"],
           datasets: myArr,
           barPercentage: 0.57,
         },
@@ -82,6 +82,7 @@
               {
                 stacked: true,
                 barPercentage: 0.66,
+                maxBarThickness: 10,
                 categoryPercentage: 0.94,
                 gridLines: {
                   display: true,
