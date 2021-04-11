@@ -66,3 +66,11 @@ section div {
   align-items: center;
   justify-content: center;
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+.initials {
+  height: 150px;
+}
